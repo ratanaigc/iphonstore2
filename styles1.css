@@ -1,0 +1,65 @@
+:root {
+    --main-bg-color: rgb(12, 97, 139);
+    --header-bg-color: rgb(52, 52, 52);
+    --text-color: rgb(255, 255, 255);
+    --hover-bg-color: rgb(216, 235, 255);
+    --active-bg-color: dodgerblue;
+    --card-bg-color: rgb(255, 255, 255);
+    --shadow-color: rgb(239, 239, 239);
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif, "Odor Mean Chey", serif;
+    background-color: var(--main-bg-color);
+    scroll-behavior: smooth; /* Smooth scroll behavior */
+  }
+  
+  .big-text {
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+  }
+  
+  /* Search Bar Styles */
+  .search-bar input:focus {
+    border: 2px solid dodgerblue; /* Focus outline for accessibility */
+  }
+  
+  /* Button Styles */
+  .btn:focus {
+    outline: 2px dashed dodgerblue; /* Focus outline for buttons */
+  }
+  
+  .btn:hover {
+    background-color: var(--hover-bg-color);
+  }
+  
+  .btn.active {
+    background-color: var(--active-bg-color);
+    color: var(--text-color);
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: var(--card-bg-color);
+    box-shadow: 2px 2px 50px var(--shadow-color);
+  }
+  
+  /* Price Tag Styles */
+  .price {
+    background-color: rgba(226, 246, 255, 0.8); /* Slight transparency */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 900px) {
+    .big-text {
+      font-size: 2rem;
+      color: rgb(120, 120, 120);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .menu-wrapper {
+      padding: 0 1rem; /* Adjust padding for smaller screens */
+    }
+  }
+  

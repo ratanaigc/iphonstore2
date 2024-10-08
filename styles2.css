@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&family=Poppins:wght@200;300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif, "Odor Mean Chey", serif;
+  background-color: rgb(12, 83, 119);
+}
+.big-text {
+    color: #fff; /* White text color */
+    padding: 3rem 0; /* Top and bottom padding */
+    text-align: center; /* Center align text */
+    font-size: 3rem; /* Main font size */
+    margin-bottom: 5rem; /* Space below the header */
+    background: linear-gradient(135deg, #007bff, #3394af); /* Gradient background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(4, 26, 49, 0.5); /* Shadow for depth */
+    transition: transform 0.3s ease; /* Smooth hover transition */
+}
+
+/* Optional: Add a hover effect */
+.big-text:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+
+/* search---------------------------------- */
+.search-bar {
+  display: flex;
+  margin-top: 10px;
+}
+.search-bar input {
+  padding: 5px;
+  width: 200px;
+  border: none;
+  border-radius: 4px;
+}
+.results-dropdown {
+  position: absolute;
+  background-color: white;
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+.result-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+.result-item:hover {
+  background-color: #f1f1f1;
+}
+#searchResults {
+  width: 10%;
+  margin-top: none;
+  padding: 0px 0px 10% ;
+  background-color: white;
+  border-radius: 25px;
+
+}
+
+.container {
+  margin: 0 auto;
+  display: grid;
+  max-width: 1100px;
+  grid-template-columns: 20% 1fr;
+  gap: 2rem;
+}
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.btn {
+  padding: 0.3rem 2rem 0.3rem 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif, "Odor Mean Chey", serif;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.1s ease-out;
+}
+.btn:hover {
+  background-color: rgb(216, 235, 255);
+}
+.btn.active {
+  background-color: dodgerblue;
+  color: white;
+}
+.menu-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 50px rgb(239, 239, 239);
+  border-radius: 25px;
+  padding: 1.5rem 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+.card:hover > .card-heading {
+  color: dodgerblue;
+}
+.card:hover > .img {
+  transform: scale(1.1);
+}
+.img {
+  margin-top: -20px;
+  width: 250px;
+  transition: all 0.2s ease-in-out;
+}
+.card-heading {
+  margin-top: -30px;
+  text-align: center;
+  font-size: 1.7rem;
+  color: rgb(142, 142, 142);
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+.price {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  background-color: rgb(226, 246, 255);
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  color: rgb(81, 168, 255);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+  .big-text {
+    font-size: 2rem;
+    background-color: transparent;
+    color: rgb(120, 120, 120);
+    margin: 1rem 0;
+  }
+  .container {
+    margin: none;
+    grid-template-columns: 1fr;
+  }
+  .menu-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .btn-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.2rem 1rem;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .menu-wrapper {
+      width: 100%;
+      display: grid; /* Use grid layout */
+      grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+      grid-gap: 1.2rem; /* Gap between items */
+      padding: none; /* Add some padding */
+    }
+  
+    .card {
+      width: 100%; /* Ensure cards fill the grid space ត្រូវប្រាកដថាកាតបំពេញចន្លោះក្រឡាចត្រង្គ*/
+      box-sizing: border-box; /* Include padding/border in width calculation រួមបញ្ចូលទ្រនាប់/ស៊ុមក្នុងការគណនាទទឹង*/
+    }
+  
+    .container {
+      padding: 0 1rem; /* Optional: add padding to the container */
+    }
+  
+    .btn-container {
+        /* Optional: stack buttons vertically */
+      width: 100%;
+      flex-direction: row; 
+      grid-gap: 0;
+    }
+    .btn{
+        border: solid 1px;
+        border-radius: 0;
+        font-size: 95%;
+    }
+    h2{
+        color: white;
+    }
+    #searchResults{
+        top: 17.50%;
+        left: 52% ;
+        width: 47%;
+        height: 9%;
+    }
+  }
+  
